@@ -175,7 +175,13 @@
     max-width:1200px; margin:0 auto; padding:0 24px;
     display:grid; grid-template-columns:repeat(3, 1fr); gap:28px;
   }
-  .g-card { background:var(--paper); padding:18px 18px 30px; box-shadow:0 10px 40px rgba(28,26,22,.08); }
+  .g-card {
+    background:var(--paper); padding:18px 18px 30px; box-shadow:0 10px 40px rgba(28,26,22,.08);
+    display:block; color:inherit; text-decoration:none;
+    transition:transform .5s cubic-bezier(.16,1,.3,1), box-shadow .5s;
+  }
+  a.g-card:hover { transform:translateY(-6px); box-shadow:0 22px 60px rgba(28,26,22,.14); }
+  .g-card .visit { display:inline-block; margin-top:14px; font-family:Pretendard, sans-serif; font-size:11px; letter-spacing:.22em; color:var(--moss); border-bottom:1px solid var(--moss); padding-bottom:3px; }
   .g-card .ph { aspect-ratio:3/4; }
   .g-card .ph img { width:100%; height:100%; object-fit:cover; }
   .g-card .role { font-family:Pretendard, sans-serif; font-size:11.5px; letter-spacing:.34em; color:var(--slate); margin:24px 0 8px; text-transform:uppercase; }
@@ -339,22 +345,24 @@
     <h2 class="rv d1">도시를 지키는 세 개의 향</h2>
   </div>
   <div class="cards">
-    <article class="g-card rv">
+    <a class="g-card rv" href="https://woogynim.github.io/nurnur-gung-detail-page/">
       <div class="ph zoom rv"><img src="img/gung.jpg" alt="새벽 달이 걸린 궁궐 처마"></div>
       <p class="role">The King · 안을 지키다</p>
       <h3>궁<span class="en">GUNG</span></h3>
-    </article>
+      <span class="visit">페이지 보기</span>
+    </a>
     <article class="g-card now rv d1">
       <div class="ph zoom rv d1"><img src="img/hero.jpg" alt="성수동 아침, 콘크리트 벽에 드리운 나뭇잎 그림자"></div>
       <p class="role">The Knight · 곁을 지키다</p>
       <h3>성수<span class="en">L'EAU SEONGSU</span></h3>
       <span class="badge">NOW VIEWING</span>
     </article>
-    <article class="g-card rv d2">
+    <a class="g-card rv d2" href="https://woogynim.github.io/nurnur-marrakesh-detail-page/">
       <div class="ph zoom rv d2"><img src="img/marrakesh.jpg" alt="해질녘 마라케쉬 테라코타 골목"></div>
       <p class="role">The Queen · 멀리를 지키다</p>
       <h3>마라케쉬<span class="en">MARRAKESH</span></h3>
-    </article>
+      <span class="visit">페이지 보기</span>
+    </a>
   </div>
 </section>
 
